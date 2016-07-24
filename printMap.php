@@ -18,12 +18,13 @@
         <script>
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15    ,
+                    zoom: 8,
                     center: {lat: 42.643619, lng: 23.340120},
                 });
 
                 <?php
-                    $link = mysql_connect('localhost', 'root', 'mimi1024@');
+                    // @set localhost acc/pass
+                    $link = mysql_connect('localhost', '', '');
                     if (!$link) {
                         die('Not connected : ' . mysql_error());
                     }
